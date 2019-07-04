@@ -23,3 +23,5 @@ test:
 production:
   <<: *default
   database: nbm_production
+  username: user
+  password: <%= ENV['DATABASE_URL'] %>
