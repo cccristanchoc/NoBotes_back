@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  city: MyString
+  address: MyString
+  phone: 9.99
+  food: MyString
+  hourEntry: 2019-07-04
+  hourExit: 2019-07-04
+
+two:
+  name: MyString
+  email: MyString
+  city: MyString
+  address: MyString
+  phone: 9.99
+  food: MyString
+  hourEntry: 2019-07-04
+  hourExit: 2019-07-04
