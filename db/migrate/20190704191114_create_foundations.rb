@@ -5,7 +5,7 @@ class CreateFoundations < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :city
       t.string :address
-      t.decimal :phone
+      t.integer :phone
       t.string :food
       t.time :hourEntry
       t.time :hourExit
