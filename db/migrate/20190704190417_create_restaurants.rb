@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :city
       t.string :address
-      t.integer :phone
+      t.bigint :phone
       t.string :food
       t.time :hourEntry
       t.time :hourExit

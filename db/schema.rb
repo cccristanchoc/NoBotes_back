@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_191114) do
     t.string "email"
     t.string "city"
     t.string "address"
-    t.decimal "phone"
+    t.bigint "phone"
     t.string "food"
     t.time "hourEntry"
     t.time "hourExit"
@@ -30,10 +30,12 @@ ActiveRecord::Schema.define(version: 2019_07_04_191114) do
     t.string "email"
     t.string "city"
     t.string "address"
-    t.decimal "phone"
+    t.bigint "phone"
     t.string "food"
     t.time "hourEntry"
     t.time "hourExit"
+    t.string "question"
+    t.decimal "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
