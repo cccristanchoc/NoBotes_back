@@ -6,7 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.string :city
       t.string :address
       t.bigint :phone
-      t.jsonb :food
+      t.jsonb :food, null: false, default: '[{}]'
       t.time :hourEntry
       t.time :hourExit
       t.string :question
