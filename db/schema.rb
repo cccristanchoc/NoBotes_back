@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_191114) do
+ActiveRecord::Schema.define(version: 2019_07_09_144731) do
+
+  create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.date "expireDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "foundations", force: :cascade do |t|
     t.string "name"
@@ -18,9 +25,10 @@ ActiveRecord::Schema.define(version: 2019_07_04_191114) do
     t.string "city"
     t.string "address"
     t.bigint "phone"
-    t.string "food"
+    t.json "food"
     t.time "hourEntry"
     t.time "hourExit"
+    t.boolean "isActive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,11 +39,12 @@ ActiveRecord::Schema.define(version: 2019_07_04_191114) do
     t.string "city"
     t.string "address"
     t.bigint "phone"
-    t.string "food"
+    t.json "food"
     t.time "hourEntry"
     t.time "hourExit"
     t.string "question"
-    t.decimal "rating"
+    t.integer "rating"
+    t.boolean "isActive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
