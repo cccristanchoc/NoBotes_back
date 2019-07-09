@@ -3,10 +3,11 @@ class CreateFoundations < ActiveRecord::Migration[5.2]
     create_table :foundations do |t|
       t.string :name
       t.string :email
+      t.string :password
       t.string :city
       t.string :address
       t.bigint :phone
-      t.jsonb :food, null: false, default: '[{}]'
+      t.jsonb :food,
       t.time :hourEntry
       t.time :hourExit
       t.boolean :isActive
