@@ -10,7 +10,8 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.time :hourEntry
       t.time :hourExit
       t.string :question
-      t.decimal :rating
+      t.integer :rating
+      t.boolean :isActive
 
       t.timestamps
     end

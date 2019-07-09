@@ -9,6 +9,7 @@ class CreateFoundations < ActiveRecord::Migration[5.2]
       t.string :food
       t.time :hourEntry
       t.time :hourExit
+      t.boolean :isActive
 
       t.timestamps
     end
