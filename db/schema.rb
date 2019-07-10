@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_144731) do
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.date "expireDate"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -22,10 +23,10 @@ ActiveRecord::Schema.define(version: 2019_07_09_144731) do
   create_table "foundations", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "password"
     t.string "city"
     t.string "address"
     t.bigint "phone"
-    t.jsonb "food"
     t.time "hourEntry"
     t.time "hourExit"
     t.boolean "isActive"
@@ -36,14 +37,13 @@ ActiveRecord::Schema.define(version: 2019_07_09_144731) do
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "password"
     t.string "city"
     t.string "address"
     t.bigint "phone"
-    t.jsonb "food"
     t.time "hourEntry"
     t.time "hourExit"
     t.string "question"
-    t.integer "rating"
     t.boolean "isActive"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
