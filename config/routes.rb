@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :ratings
+  resources :tips
+  resources :solicitations
   resources :foods
   resources :foundations
   resources :restaurants

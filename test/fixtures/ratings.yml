@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idQualifiedEntity: MyString
+  idQualifyingEntity: MyString
+  rating: 1
+
+two:
+  idQualifiedEntity: MyString
+  idQualifyingEntity: MyString
+  rating: 1

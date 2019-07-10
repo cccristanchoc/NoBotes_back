@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idRestaurant: MyString
+  idFood: MyString
+  description: MyString
+
+two:
+  idRestaurant: MyString
+  idFood: MyString
+  description: MyString
