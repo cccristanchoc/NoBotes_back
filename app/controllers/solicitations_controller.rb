@@ -40,12 +40,12 @@ class SolicitationsController < ApplicationController
 
   # GET /solicitations/applicant/1
   def byApplicant
-    render json: @Applicant
+    render json: @applicant
   end
 
   # GET /solicitations/applied/1
   def byApplied
-    render json: @Applied
+    render json: @applied
   end
 
   private
@@ -55,11 +55,11 @@ class SolicitationsController < ApplicationController
     end
 
     def set_applicant
-      @Applicant = Solicitation.where(idApplicant:(params[:id]))
+      @applicant = Solicitation.where(idApplicant:(params[:id]))
     end
     
     def set_applied
-      @Applied = Solicitation.where(idApplied:(params[:id]))
+      @applied = Solicitation.where(idApplied:(params[:id]))
     end
 
     # Only allow a trusted parameter "white list" through.
