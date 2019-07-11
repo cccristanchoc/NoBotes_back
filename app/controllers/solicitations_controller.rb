@@ -1,5 +1,5 @@
 class SolicitationsController < ApplicationController
-  before_action :set_solicitation, :set_applicant, :set_applied, only: [:show, :update, :destroy, :byapplicant, :byApplied]
+  before_action :set_solicitation, only: [:show, :update, :destroy, :byapplicant, :byApplied]
 
   # GET /solicitations
   def index
@@ -40,11 +40,13 @@ class SolicitationsController < ApplicationController
 
   # GET /solicitations/applicant/1
   def byApplicant
+    @applicant = Solicitation.where(idApplicant:(params[:id]))
     render json: @applicant
   end
 
   # GET /solicitations/applied/1
   def byApplied
+    @applied = Solicitation.where(idApplied:(params[:id]))
     render json: @applied
   end
 
@@ -53,15 +55,7 @@ class SolicitationsController < ApplicationController
     def set_solicitation
       @solicitation = Solicitation.find(params[:id])
     end
-
-    def set_applicant
-      @applicant = Solicitation.where(idApplicant:(params[:id]))
-    end
     
-    def set_applied
-      @applied = Solicitation.where(idApplied:(params[:id]))
-    end
-
     # Only allow a trusted parameter "white list" through.
     def solicitation_params
       params.require(:solicitation).permit(:idApplicant, :idApplied, :description)
