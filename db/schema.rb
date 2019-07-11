@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_144731) do
+ActiveRecord::Schema.define(version: 2019_07_10_153142) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 2019_07_09_144731) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ratings", force: :cascade do |t|
+    t.string "idQualifiedEntity"
+    t.string "idQualifyingEntity"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -45,6 +53,22 @@ ActiveRecord::Schema.define(version: 2019_07_09_144731) do
     t.time "hourExit"
     t.string "question"
     t.boolean "isActive"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "solicitations", force: :cascade do |t|
+    t.string "idApplicant"
+    t.string "idApplied"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tips", force: :cascade do |t|
+    t.string "idRestaurant"
+    t.string "idFood"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
